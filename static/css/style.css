@@ -788,6 +788,7 @@ h1 span {
    CONTENT SECTIONS
    ---------------------------------------------------------- */
 
+.registration,
 .speakers,
 .program,
 .venue,
@@ -818,20 +819,24 @@ h1 span {
 
 /* Alternate backgrounds */
 
-.speakers {
+.registration {
     background: var(--white);
+}
+
+.speakers {
+    background: #f7fafb;
 }
 
 .program {
-    background: #f7fafb;
-}
-
-.venue {
     background: var(--white);
 }
 
-.committee {
+.venue {
     background: #f7fafb;
+}
+
+.committee {
+    background: var(--white);
 }
 
 
@@ -1542,8 +1547,6 @@ h1 span {
         gap: 55px;
     }
 
-}
-
     /* Partners */
 
     .partners {
@@ -1582,6 +1585,8 @@ h1 span {
         top: 2%;
         bottom: 9%;
     }
+
+}
 
 
 /* ==========================================================
