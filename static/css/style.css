@@ -1,0 +1,1698 @@
+/* ==========================================================
+   AIROYoung Workshop 2027
+   Salerno · 22–24 February 2027
+   ========================================================== */
+
+
+/* ----------------------------------------------------------
+   COLORS
+   ---------------------------------------------------------- */
+
+:root {
+    --light-blue: #dff3f8;
+    --blue: #145da0;
+    --footer-blue: #071d2b;
+    --dark-blue: #123b5d;
+    --orange: #e87722;
+
+    --white: #ffffff;
+    --text: #183042;
+}
+
+
+/* ----------------------------------------------------------
+   BASE
+   ---------------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: var(--text);
+    background: var(--white);
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+}
+
+
+/* ----------------------------------------------------------
+   HEADER / NAVIGATION
+   ---------------------------------------------------------- */
+
+.site-header {
+    background: var(--white);
+
+    border-bottom: 1px solid #e7eef2;
+}
+
+.nav-container {
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo img {
+    display: block;
+    width: auto;
+    height: 45px;
+    max-height: 45px;
+    object-fit: contain;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+}
+
+nav a {
+    color: var(--dark-blue);
+
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--orange);
+}
+
+
+/* ----------------------------------------------------------
+   HERO
+   ---------------------------------------------------------- */
+
+.hero {
+    min-height: 720px;
+
+    background: var(--light-blue);
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+    padding-top: 70px;
+    padding-bottom: 80px;
+}
+
+
+/* ----------------------------------------------------------
+   PHOTO COMPOSITION
+   ---------------------------------------------------------- */
+
+.photo-composition {
+    position: relative;
+
+    width: 100%;
+    height: 560px;
+}
+
+.photo {
+    position: absolute;
+
+    overflow: hidden;
+
+    border-radius: 3px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(18, 59, 93, 0.12);
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* First photo — horizontal */
+
+.photo-1 {
+    width: 62%;
+    height: 210px;
+
+    top: 0;
+    left: 5%;
+}
+
+.photo-1 img {
+    object-position: center center;
+}
+
+
+/* Second photo — vertical */
+
+.photo-2 {
+    width: 50%;
+    height: 330px;
+
+    top: 115px;
+    right: -10%;
+}
+
+.photo-2 img {
+    object-position: center center;
+}
+
+
+/* Third photo — horizontal */
+
+.photo-3 {
+    width: 60%;
+    height: 360px;
+
+    bottom: -10%;
+    left: 16%;
+
+    transform: scale(0.9);
+}
+
+.photo-3 img {
+    object-position: center center;
+}
+
+/* ----------------------------------------------------------
+   HERO TEXT
+   ---------------------------------------------------------- */
+
+.hero-info {
+    padding-left: 10px;
+}
+
+
+/* Location */
+
+/* Workshop logo */
+
+.workshop-logo {
+    display: block;
+
+    width: 100px;
+    max-width: 90%;
+
+    height: auto;
+
+    margin-bottom: 35px;
+}
+
+.eyebrow {
+    margin: 0 0 20px;
+
+    color: var(--blue);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+/* Main title */
+
+h1 {
+    margin: 0;
+
+    color: var(--dark-blue);
+
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 700;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.04em;
+}
+
+h1 span {
+    display: block;
+
+    margin-top: 8px;
+
+    color: var(--blue);
+}
+
+
+/* Date */
+
+.date {
+    margin: 30px 0 0;
+
+    color: var(--orange);
+
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+
+/* Intro text */
+
+.intro {
+    max-width: 430px;
+
+    margin: 18px 0 36px;
+
+    font-size: 1.05rem;
+
+    line-height: 1.6;
+}
+
+
+/* ----------------------------------------------------------
+   COUNTDOWN
+   ---------------------------------------------------------- */
+
+.countdown-placeholder {
+    display: flex;
+
+    gap: 28px;
+
+    max-width: 460px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        rgba(18, 59, 93, 0.18);
+}
+
+.countdown-placeholder div {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.countdown-placeholder strong {
+    color: var(--dark-blue);
+
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.countdown-placeholder span {
+    margin-top: 5px;
+
+    color: var(--blue);
+
+    font-size: 0.7rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* ----------------------------------------------------------
+   BUTTONS
+   ---------------------------------------------------------- */
+
+.button {
+    display: inline-block;
+
+    padding: 14px 22px;
+
+    background: var(--dark-blue);
+    color: var(--white);
+
+    border-radius: 4px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.button:hover {
+    background: var(--orange);
+
+    transform: translateY(-1px);
+}
+
+/* ----------------------------------------------------------
+   THEME
+   ---------------------------------------------------------- */
+
+.theme {
+    background: var(--white);
+
+    padding: 100px 0;
+}
+
+.theme-content {
+    max-width: 850px;
+}
+
+.section-label {
+    margin: 0 0 18px;
+
+    color: var(--orange);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+}
+
+.theme h2 {
+    margin: 0 0 30px;
+
+    color: var(--dark-blue);
+
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    letter-spacing: -0.03em;
+}
+
+.theme p {
+    margin: 0 0 22px;
+
+    font-size: 1.05rem;
+    line-height: 1.75;
+
+    color: var(--text);
+}
+
+
+/* Workshop scientific theme */
+
+.workshop-theme {
+    position: relative;
+
+    max-width: 680px;
+    margin: 40px auto;
+
+    padding: 10px 55px;
+
+    color: var(--text);
+
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+.workshop-theme::before,
+.workshop-theme::after {
+    position: absolute;
+
+    color: var(--orange);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.workshop-theme::before {
+    content: "“";
+
+    top: 0;
+    left: 0;
+}
+
+.workshop-theme::after {
+    content: "”";
+
+    right: 0;
+    bottom: -18px;
+}
+
+/* ----------------------------------------------------------
+   IMPORTANT DATES
+   ---------------------------------------------------------- */
+
+.important-dates-heading {
+    text-align: center;
+}
+
+.important-dates {
+    padding: 90px 0 110px;
+
+    background: var(--light-blue);
+}
+
+.important-dates h2 {
+    margin: 0 0 65px;
+
+    color: var(--dark-blue);
+
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    letter-spacing: -0.03em;
+}
+
+
+/* Timeline */
+
+/* ----------------------------------------------------------
+   TIMELINE
+   ---------------------------------------------------------- */
+
+.timeline {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    margin-top: 40px;
+}
+
+
+/* Horizontal line */
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    top: 120px;
+
+    left: 9%;
+    right: 9%;
+
+    height: 2px;
+
+    background: rgba(20, 93, 160, 0.25);
+}
+
+
+/* Individual item */
+
+.timeline-item {
+    position: relative;
+
+    min-height: 250px;
+
+    text-align: center;
+}
+
+
+/* Dot */
+
+.timeline-dot {
+    position: absolute;
+
+    top: 113px;
+    left: 50%;
+
+    width: 16px;
+    height: 16px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: var(--orange);
+
+    border: 4px solid var(--light-blue);
+
+    box-shadow: 0 0 0 2px var(--orange);
+
+    z-index: 2;
+}
+
+
+/* Date */
+
+.timeline-date {
+    margin: 0;
+
+    color: var(--dark-blue);
+
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+
+/* Description */
+
+.timeline-text {
+    max-width: none;
+    white-space: nowrap;
+
+    margin: 8px auto 0;
+
+    color: var(--text);
+
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+
+/* ----------------------------------------------------------
+   ITEMS ABOVE THE LINE
+   ---------------------------------------------------------- */
+
+.timeline-item:nth-child(odd) .timeline-date {
+    position: absolute;
+
+    bottom: 205px;
+    left: 10px;
+    right: 10px;
+
+    margin: 0;
+}
+
+.timeline-item:nth-child(odd) .timeline-text {
+    position: absolute;
+
+    bottom: 155px;
+    left: 10px;
+    right: 10px;
+
+    margin: 0 auto;
+}
+
+/* ----------------------------------------------------------
+   ITEMS BELOW THE LINE
+   ---------------------------------------------------------- */
+
+.timeline-item:nth-child(even) .timeline-date {
+    position: absolute;
+
+    top: 155px;
+    left: 10px;
+    right: 10px;
+}
+
+.timeline-item:nth-child(even) .timeline-text {
+    position: absolute;
+
+    top: 190px;
+    left: 10px;
+    right: 10px;
+
+    margin: 0 auto;
+}
+
+
+/* ----------------------------------------------------------
+   WORKSHOP - FINAL POINT
+   ---------------------------------------------------------- */
+
+.timeline-workshop .timeline-dot {
+    width: 20px;
+    height: 20px;
+
+    top: 111px;
+
+    background: var(--dark-blue);
+    border-color: var(--light-blue);
+
+    box-shadow: 0 0 0 2px var(--dark-blue);
+}
+
+.timeline-workshop .timeline-date {
+    color: var(--orange);
+}
+
+/* ----------------------------------------------------------
+   FOOTER
+   ---------------------------------------------------------- */
+
+.site-footer {
+    padding: 65px 0 30px;
+
+    background: var(--footer-blue);
+    color: var(--white);
+}
+
+
+/* Main footer area */
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    padding-bottom: 50px;
+}
+
+
+/* Workshop information */
+
+.footer-info h2 {
+    margin: 0 0 12px;
+
+    color: var(--white);
+
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.footer-info p {
+    margin: 0 0 8px;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-organized {
+    margin-top: 20px !important;
+}
+
+.footer-organized strong {
+    color: var(--white);
+}
+
+
+/* Contact */
+
+.footer-contact {
+    justify-self: end;
+
+    max-width: 380px;
+}
+
+.footer-label {
+    margin: 0 0 15px;
+
+    color: var(--orange);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+}
+
+.footer-contact p:not(.footer-label) {
+    margin: 0 0 8px;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 0.95rem;
+}
+
+.footer-contact a {
+    color: var(--white);
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid var(--orange);
+}
+
+.footer-contact a:hover {
+    color: var(--orange);
+}
+
+
+/* Bottom footer */
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 0.8rem;
+}
+
+.footer-bottom a {
+    color: rgba(255, 255, 255, 0.7);
+
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: var(--orange);
+}
+
+/* ----------------------------------------------------------
+   CONTENT SECTIONS
+   ---------------------------------------------------------- */
+
+.speakers,
+.program,
+.venue,
+.committee {
+    padding: 90px 0;
+}
+
+.simple-section {
+    max-width: 900px;
+}
+
+.simple-section h2 {
+    margin: 0 0 30px;
+
+    color: var(--dark-blue);
+
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    letter-spacing: -0.03em;
+}
+
+.simple-section p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+
+/* Alternate backgrounds */
+
+.speakers {
+    background: var(--white);
+}
+
+.program {
+    background: #f7fafb;
+}
+
+.venue {
+    background: var(--white);
+}
+
+.committee {
+    background: #f7fafb;
+}
+
+
+/* Coming soon */
+
+.coming-soon {
+    color: var(--blue);
+
+    font-size: 1.1rem !important;
+    font-weight: 600;
+}
+
+
+/* Committee */
+
+.committee-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 40px;
+}
+
+.committee-list p {
+    margin: 0;
+}
+
+.committee-list strong {
+    color: var(--dark-blue);
+}
+
+/* ----------------------------------------------------------
+   VENUE
+   ---------------------------------------------------------- */
+
+.venue {
+    padding: 100px 0;
+
+    background: var(--white);
+}
+
+.venue h2 {
+    margin: 0 0 45px;
+
+    color: var(--dark-blue);
+
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    letter-spacing: -0.03em;
+}
+
+
+/* Venue + map */
+
+.venue-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.venue-info h3 {
+    margin: 0 0 8px;
+
+    color: var(--dark-blue);
+
+    font-size: 1.6rem;
+}
+
+.venue-address {
+    margin: 0 0 25px;
+
+    color: var(--orange);
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    letter-spacing: 0.06em;
+}
+
+.venue-info p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+
+/* Map */
+
+.venue-map {
+    width: 100%;
+    height: 360px;
+
+    border-radius: 3px;
+
+    overflow: hidden;
+}
+
+
+/* Getting there */
+
+.getting-there {
+    margin-top: 80px;
+    padding-top: 55px;
+
+    border-top: 1px solid #e7eef2;
+}
+
+.getting-there h3 {
+    margin: 0 0 35px;
+
+    color: var(--dark-blue);
+
+    font-size: 1.7rem;
+}
+
+.travel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 45px;
+}
+
+.travel-label {
+    margin: 0 0 10px;
+
+    color: var(--orange);
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+}
+
+.travel-item h4 {
+    margin: 0 0 14px;
+
+    color: var(--dark-blue);
+
+    font-size: 1.1rem;
+}
+
+.travel-item p:not(.travel-label) {
+    margin: 0;
+
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+/* ----------------------------------------------------------
+   COMMITTEE
+   ---------------------------------------------------------- */
+
+.committee {
+    padding: 90px 0;
+
+    background: #f7fafb;
+}
+
+.committee h2 {
+    margin: 0 0 50px;
+
+    color: var(--dark-blue);
+
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    letter-spacing: -0.03em;
+}
+
+
+/* Two columns */
+
+.organization-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+}
+
+
+/* Column titles */
+
+.organization-group {
+    text-align: center;
+}
+
+.organization-group h3 {
+    margin: 0 0 30px;
+    padding-bottom: 15px;
+
+    color: var(--dark-blue);
+
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    border-bottom: 2px solid var(--orange);
+}
+
+
+/* People */
+
+.people-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.person strong {
+    color: var(--dark-blue);
+
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.person span {
+    color: #5f7180;
+
+    font-size: 0.88rem;
+    line-height: 1.45;
+}
+
+/* ----------------------------------------------------------
+   PHOTO CREDITS
+   ---------------------------------------------------------- */
+
+.photo-credits {
+    position: relative;
+
+    margin: 0;
+
+    text-align: right;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 0.8rem;
+}
+
+
+/* Clickable "Photo credits" */
+
+.photo-credits summary {
+    cursor: pointer;
+
+    list-style: none;
+    user-select: none;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    transition: color 0.2s ease;
+}
+
+.photo-credits summary::-webkit-details-marker {
+    display: none;
+}
+
+.photo-credits summary:hover {
+    color: var(--orange);
+}
+
+
+/* Box that appears above */
+
+.photo-credits-content {
+    position: absolute;
+
+    right: 0;
+    bottom: 30px;
+
+    width: 540px;
+
+    padding: 18px 20px;
+
+    background: var(--white);
+
+    border-radius: 4px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+    text-align: right;
+
+    z-index: 10;
+}
+
+
+/* Text inside */
+
+.photo-credits-content p {
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 0.75rem;
+    line-height: 1.6;
+}
+
+.photo-credits-content p + p {
+    margin-top: 10px;
+}
+
+
+/* Links inside */
+
+.photo-credits-content a {
+    color: var(--blue);
+
+    text-decoration: none;
+}
+
+.photo-credits-content a:hover {
+    color: var(--orange);
+}
+
+/* ----------------------------------------------------------
+   PARTNERS
+   ---------------------------------------------------------- */
+
+.partners {
+    padding: 90px 0 100px;
+
+    background: var(--white);
+}
+
+.partners-heading {
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.partners h2 {
+    margin: 0;
+
+    color: var(--dark-blue);
+
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    letter-spacing: -0.03em;
+}
+
+
+/* Partner groups */
+
+.partner-group {
+    margin-top: 55px;
+
+    text-align: center;
+}
+
+.partner-label {
+    margin: 0 0 30px;
+
+    color: #71818d;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+}
+
+
+/* Logos */
+
+.partner-logos {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 45px 60px;
+}
+
+.partner-logo {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 190px;
+    height: 100px;
+}
+
+.partner-logo img {
+    display: block;
+
+    max-width: 100%;
+    max-height: 90px;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* Patronage logo slightly larger */
+
+.patronage-logos .partner-logo {
+    width: 220px;
+    height: 120px;
+}
+
+.patronage-logos .partner-logo img {
+    max-height: 110px;
+}
+
+/* ==========================================================
+   TABLET / MOBILE
+   ========================================================== */
+
+@media (max-width: 800px) {
+
+    /* ------------------------------------------------------
+       Navigation
+       ------------------------------------------------------ */
+
+    nav {
+        display: none;
+    }
+
+
+    /* ------------------------------------------------------
+       Hero
+       ------------------------------------------------------ */
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding-top: 45px;
+        padding-bottom: 60px;
+    }
+
+
+    /* Put text before photos */
+
+    .hero-info {
+        order: 1;
+        padding-left: 0;
+    }
+
+    .photo-composition {
+        order: 2;
+        height: 430px;
+    }
+
+
+    /* ------------------------------------------------------
+       Photos
+       ------------------------------------------------------ */
+
+    .photo-composition {
+        order: 2;
+
+        width: 100%;
+        height: 520px;
+    }
+
+    /* ------------------------------------------------------
+       Typography
+       ------------------------------------------------------ */
+
+    h1 {
+        font-size: clamp(3rem, 12vw, 4.5rem);
+    }
+
+    .date {
+        font-size: 2rem;
+    }
+
+
+    /* ------------------------------------------------------
+       Countdown
+       ------------------------------------------------------ */
+
+    .countdown-placeholder {
+        gap: 18px;
+    }
+
+    .countdown-placeholder strong {
+        font-size: 1.5rem;
+    }
+
+
+    /* ------------------------------------------------------
+       Theme
+       ------------------------------------------------------ */
+
+    .theme {
+        padding: 70px 0;
+    }
+
+    .theme h2 {
+        font-size: 2rem;
+    }
+
+    .workshop-theme {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+
+    /* ------------------------------------------------------
+       Important Dates
+       ------------------------------------------------------ */
+
+    .important-dates {
+        padding: 70px 0;
+    }
+
+    .important-dates h2 {
+        margin-bottom: 45px;
+
+        font-size: 2rem;
+    }
+
+
+    /* Timeline becomes vertical */
+
+    .timeline {
+        display: block;
+
+        margin-top: 0;
+    }
+
+
+    /* Vertical line */
+
+    .timeline::before {
+        top: 0;
+        bottom: 0;
+
+        left: 9px;
+        right: auto;
+
+        width: 2px;
+        height: auto;
+    }
+
+
+    /* Timeline items */
+
+    .timeline-item {
+        min-height: 0;
+
+        padding: 0 0 40px 45px;
+
+        text-align: left;
+    }
+
+    .timeline-item:last-child {
+        padding-bottom: 0;
+    }
+
+
+    /* Dots */
+
+    .timeline-dot,
+    .timeline-workshop .timeline-dot {
+        top: 3px;
+        left: 9px;
+
+        transform: translateX(-50%);
+    }
+
+
+    /* Normal dots */
+
+    .timeline-dot {
+        width: 16px;
+        height: 16px;
+    }
+
+
+    /* Final workshop dot */
+
+    .timeline-workshop .timeline-dot {
+        width: 20px;
+        height: 20px;
+
+        top: 1px;
+    }
+
+
+    /* Remove desktop positioning */
+
+    .timeline-item:nth-child(odd) .timeline-date,
+    .timeline-item:nth-child(even) .timeline-date {
+        position: static;
+
+        margin: 0 0 7px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-text,
+    .timeline-item:nth-child(even) .timeline-text {
+        position: static;
+
+        max-width: none;
+
+        margin: 0;
+    }
+
+        /* ------------------------------------------------------
+       Footer
+       ------------------------------------------------------ */
+
+    .site-footer {
+        padding: 50px 0 25px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding-bottom: 35px;
+    }
+
+    .footer-contact {
+        justify-self: start;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .speakers,
+    .program,
+    .venue,
+    .committee {
+        padding: 70px 0;
+    }
+
+    .simple-section h2 {
+        font-size: 2rem;
+    }
+
+    .committee-list {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+        /* Venue */
+
+    .venue {
+        padding: 70px 0;
+    }
+
+    .venue h2 {
+        font-size: 2rem;
+    }
+
+    .venue-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .venue-map {
+        height: 320px;
+    }
+
+    .getting-there {
+        margin-top: 60px;
+        padding-top: 45px;
+    }
+
+    .travel-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+        /* Committee */
+
+    .committee {
+        padding: 70px 0;
+    }
+
+    .committee h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .organization-grid {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+}
+
+    /* Partners */
+
+    .partners {
+        padding: 70px 0;
+    }
+
+    .partners h2 {
+        font-size: 2rem;
+    }
+
+    .partners-heading {
+        margin-bottom: 45px;
+    }
+
+    .partner-logos {
+        gap: 35px;
+    }
+
+    .partner-logo {
+        width: 150px;
+        height: 85px;
+    }
+
+    .partner-logo img {
+        max-height: 75px;
+    }
+
+
+/* ==========================================================
+   SMALL PHONES
+   ========================================================== */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 88%;
+    }
+
+
+    /* ------------------------------------------------------
+       Navigation
+       ------------------------------------------------------ */
+
+    .nav-container {
+        min-height: 70px;
+    }
+
+    .logo img {
+        height: 40px;
+        max-height: 40px;
+    }
+
+
+    /* ------------------------------------------------------
+       Hero
+       ------------------------------------------------------ */
+
+    .hero-grid {
+        padding-top: 35px;
+        padding-bottom: 45px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+
+    /* ------------------------------------------------------
+       Countdown
+       ------------------------------------------------------ */
+
+    .countdown-placeholder {
+        justify-content: space-between;
+
+        gap: 10px;
+    }
+
+    .countdown-placeholder strong {
+        font-size: 1.35rem;
+    }
+
+    .countdown-placeholder span {
+        font-size: 0.6rem;
+    }
+
+
+    /* ------------------------------------------------------
+       Photos
+       ------------------------------------------------------ */
+
+    .photo-composition {
+        height: 370px;
+    }
+
+    .photo-1 {
+        height: 140px;
+    }
+
+    .photo-2 {
+        height: 215px;
+
+        top: 75px;
+    }
+
+    .photo-3 {
+        height: 125px;
+    }
+
+
+    /* ------------------------------------------------------
+       theme
+       ------------------------------------------------------ */
+
+    .theme {
+        padding: 60px 0;
+    }
+
+    .theme h2 {
+        font-size: 1.8rem;
+    }
+
+    .workshop-theme {
+        margin: 35px auto;
+
+        padding-left: 30px;
+        padding-right: 30px;
+
+        font-size: 1.1rem;
+    }
+
+    .workshop-theme::before,
+    .workshop-theme::after {
+        font-size: 2.5rem;
+    }
+
+
+    /* ------------------------------------------------------
+       Important Dates
+       ------------------------------------------------------ */
+
+    .important-dates {
+        padding: 60px 0;
+    }
+
+    .important-dates h2 {
+        font-size: 1.8rem;
+    }
+
+    .photo-credits-content {
+        width: min(400px, 85vw);
+    }
+
+}

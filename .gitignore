@@ -1,0 +1,14 @@
+# Hugo generated files
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/

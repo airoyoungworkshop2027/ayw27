@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>11th AIROYoung Workshop</title>
+
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?v={{ now.Unix }}">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+
+    <header class="site-header">
+
+        <div class="container nav-container">
+
+        <a class="logo" href="/">
+            <img
+                src="{{ "images/ay_logo_no_bckgnd.png" | relURL }}"
+                alt="AIROYoung"
+                height="45">
+        </a>
+            <nav>
+
+                <a href="#">Home</a>
+
+                <a href="#theme">Theme</a>
+
+                <a href="#speakers">Speakers</a>
+                
+                <a href="#program">Program</a>
+                
+                <a href="#venue">Venue</a>
+                
+                <a href="#committee">Committee</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+         ========================================= -->
+
+    <main>
+
+
+        <!-- =====================================
+             HERO
+             ===================================== -->
+
+        <section class="hero">
+
+            <div class="container hero-grid">
+
+
+                <!-- =============================
+                     PHOTOS
+                     ============================= -->
+
+                <div class="photo-composition">
+
+
+                    <!-- Photo 1 -->
+
+                    <div class="photo photo-1">
+
+                        <img
+                            src="/images/Salerno1.jpg"
+                            alt="View of Salerno">
+
+                    </div>
+
+
+                    <!-- Photo 2 - Vertical -->
+
+                    <div class="photo photo-2">
+
+                        <img
+                            src="/images/Salerno4.png"
+                            alt="Salerno">
+
+                    </div>
+
+
+                    <!-- Photo 3 -->
+
+                    <div class="photo photo-3">
+
+                        <img
+                            src="/images/Salerno2.jfif"
+                            alt="View of Salerno">
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =============================
+                     WORKSHOP INFORMATION
+                     ============================= -->
+
+                <div class="hero-info">
+
+
+                <div class="hero-info">
+
+                    <img
+                        class="workshop-logo"
+                        src="/images/AYW27-colored.png"
+                        alt="AIROYoung Workshop 2027">
+
+                    <p class="eyebrow">
+                        SALERNO · ITALY
+                    </p>
+
+                    <h1>
+
+                        11th AIROYoung
+
+                        <span>
+                            Workshop
+                        </span>
+
+                    </h1>
+
+
+                    <p class="date">
+                        22–24 February, 2027
+                    </p>
+
+
+                    <p class="intro">
+
+                        Cybersecurity, Disinformation Mitigation and Emerging Challenges in Operations Research
+
+                    </p>
+
+
+
+                    <!-- =========================
+                         COUNTDOWN
+                         ========================= -->
+
+                    <div class="countdown-placeholder" id="countdown">
+
+                        <div>
+                            <strong id="days">---</strong>
+                            <span>Days</span>
+                        </div>
+
+                        <div>
+                            <strong id="hours">--</strong>
+                            <span>Hours</span>
+                        </div>
+
+                        <div>
+                            <strong id="minutes">--</strong>
+                            <span>Minutes</span>
+                        </div>
+
+                        <div>
+                            <strong id="seconds">--</strong>
+                            <span>Seconds</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <!-- =====================================
+        THEME
+        ===================================== -->
+
+        <section class="theme" id="theme">
+
+            <div class="container theme-content">
+
+                <h2>
+                    Welcome to the 11th AIROYoung Workshop
+                </h2>
+
+                <p>
+                    We are pleased to invite you to the
+                    <strong>11th AIROYoung Workshop</strong>,
+                    which will be held in
+                    <strong>Salerno, Italy, from the 22nd to the 24th of February 2027</strong>,
+                    with the title:
+                </p>
+
+                <h3 class="workshop-theme">
+                    Cybersecurity, Disinformation Mitigation,
+                    and Emerging Challenges in Operations Research
+                </h3>
+
+                <p>
+                    Modern societies increasingly rely on interconnected systems and communities, 
+                    which are particularly exposed to cyberattacks, data breaches, disinformation, 
+                    and online manipulation.
+
+                    <strong>Operations Research</strong> can contribute to building 
+                    more secure, reliable, and resilient systems by supporting decision 
+                    makers in anticipating threats, assessing vulnerabilities, 
+                    allocating limited resources, and designing effective mitigation strategies.
+                </p>
+
+                <p>
+                    The workshop will welcome contributions on these and other 
+                    emerging challenges, including <strong>network design, resource allocation,
+                    interdiction, information diffusion, influence limitation,
+                    and decision-making under uncertainty</strong>, as well as contributions from 
+                    all areas of Operations Research and Decision and Data Science.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================
+            IMPORTANT DATES
+        ===================================== -->
+
+        <section class="important-dates" id="important-dates">
+
+            <div class="important-dates-heading">
+
+                <p class="section-label">
+                    MARK YOUR CALENDAR
+                </p>
+
+                <h2>Important dates</h2>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+
+                        <p class="timeline-date">
+                            9 November 2026
+                        </p>
+
+                        <p class="timeline-text">
+                            Registration, Abstract submission &amp;<br>
+                            Grant application opening
+                        </p>
+                    </div>
+
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+
+                        <p class="timeline-date">
+                            30 December 2026
+                        </p>
+
+                        <p class="timeline-text">
+                            Abstract submission<br>Deadline
+                        </p>
+                    </div>
+
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+
+                        <p class="timeline-date">
+                            11 January 2027
+                        </p>
+
+                        <p class="timeline-text">
+                            Notification of<br>acceptance
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+
+                        <p class="timeline-date">
+                            2 February 2027
+                        </p>
+
+                        <p class="timeline-text">
+                            Speaker confirmation &amp;<br>Proof of travel (for Grants)
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+
+                        <p class="timeline-date">
+                            8 February 2027
+                        </p>
+
+                        <p class="timeline-text">
+                            Registration<br>Deadline
+                        </p>
+                    </div>
+
+                    <div class="timeline-item timeline-workshop">
+                        <div class="timeline-dot"></div>
+
+                        <p class="timeline-date">
+                            22-24 February 2027
+                        </p>
+
+                        <p class="timeline-text">
+                            AIROYoung<br>Workshop 2027
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================
+        SPEAKERS
+        ===================================== -->
+
+        <section class="speakers" id="speakers">
+
+            <div class="container simple-section">
+
+                <p class="section-label">
+                    INVITED SPEAKERS
+                </p>
+
+                <h2>Speakers</h2>
+
+                <p class="coming-soon">
+                    Invited speakers will be announced soon... stay tuned!
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================
+            PROGRAM
+        ===================================== -->
+
+        <section class="program" id="program">
+
+            <div class="container simple-section">
+
+                <p class="section-label">
+                    WORKSHOP SCHEDULE
+                </p>
+
+                <h2>Program</h2>
+
+                <p class="coming-soon">
+                    The detailed program and the Book of Abstracts will be available here.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- =====================================
+            VENUE
+        ===================================== -->
+
+        <section class="venue" id="venue">
+
+            <div class="container">
+
+                <p class="section-label">
+                    SALERNO · ITALY
+                </p>
+
+                <h2>Venue</h2>
+
+                <div class="venue-grid">
+
+                    <div class="venue-info">
+
+                        <h3>Salone dei Marmi</h3>
+
+                        <p class="venue-address">
+                            Palazzo di Città · Salerno
+                        </p>
+
+                        <p>
+                            The workshop will be held at the
+                            <strong>Salone dei Marmi</strong>, located inside
+                            <strong>Palazzo di Città</strong> in <strong>Salerno</strong>.
+                            Its central location provides easy access to the
+                            railway station, accommodation facilities,
+                            restaurants, and the historic centre, either
+                            on foot or by local public transport.
+                        </p>
+
+                    </div>
+
+                    <div class="venue-map" id="venue-map"></div>
+
+                </div>
+
+
+                <div class="getting-there">
+
+                    <h3>Getting to Salerno</h3>
+
+                    <div class="travel-grid">
+
+                        <div class="travel-item">
+
+                            <p class="travel-label">BY TRAIN</p>
+
+                            <h4>High-speed rail</h4>
+
+                            <p>
+                                Salerno is directly connected to the Italian
+                                high-speed railway network through Trenitalia
+                                and Italo services, with direct connections
+                                to Naples, Rome, Florence, Bologna, Milan,
+                                and several other Italian cities.
+                            </p>
+
+                        </div>
+
+
+                        <div class="travel-item">
+
+                            <p class="travel-label">BY AIR</p>
+
+                            <h4>Salerno Airport</h4>
+
+                            <p>
+                                Salerno Costa d'Amalfi e del Cilento Airport
+                                is located south of the city. The Salerno
+                                Airlink service connects the airport with
+                                Salerno railway station in approximately
+                                40 minutes.
+                            </p>
+
+                        </div>
+
+
+                        <div class="travel-item">
+
+                            <p class="travel-label">BY AIR</p>
+
+                            <h4>Naples Airport</h4>
+
+                            <p>
+                                Naples International Airport - Capodichino
+                                offers a wider range of domestic and
+                                international connections. Salerno can be reached
+                                directly from the airport by bus or taxi, 
+                                or by train from Naples city centre.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    <!-- =====================================
+        COMMITTEE
+     ===================================== -->
+
+    <section class="committee" id="committee">
+
+        <div class="container">
+
+            <p class="section-label">
+                ORGANIZATION
+            </p>
+
+            <h2>Committee</h2>
+
+
+            <div class="organization-grid">
+
+
+                <!-- Organizing Committee -->
+
+                <div class="organization-group">
+
+                    <h3>Organizing Committee</h3>
+
+                    <div class="people-list">
+
+                        <div class="person">
+                            <strong>Martina Cerulli</strong>
+                            <span>Department of Computer Science, University of Salerno</span>
+                        </div>
+
+                        <div class="person">
+                            <strong>Chiara De Simone</strong>
+                            <span>Department of Mathematics, University of Salerno</span>
+                        </div>
+
+                        <div class="person">
+                            <strong>Teresa Elia</strong>
+                            <span>Department of Computer Science, University of Salerno</span>
+                        </div>
+
+                        <div class="person">
+                            <strong>Antonio Guerriero</strong>
+                            <span>Department of Computer Science, University of Salerno</span>
+                        </div>
+
+                        <div class="person">
+                            <strong>Raffaella Rinaldi</strong>
+                            <span>Department of Management & Innovation Systems, University of Salerno</span>
+                        </div>
+
+                        <div class="person">
+                            <strong>Carmine Sorgente</strong>
+                            <span>Department of Mathematics, University of Salerno</span>
+                        </div>
+
+                        <div class="person">
+                            <strong>Roberto Tufano</strong>
+                            <span>Department of Mathematics, University of Salerno</span>
+                        </div>
+
+                        <div class="person">
+                            <strong>Francesco Giuseppe Zammarelli</strong>
+                            <span>Department of Computer Science, University of Salerno</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AIROYoung Board -->
+
+                <div class="organization-group">
+
+                    <h3>AIROYoung Board</h3>
+
+                    <div class="people-list">
+
+                        <div class="person">
+                            <strong>Matteo Cosmi</strong>
+                            <span>University of Luxembourg</span>
+                        </div>
+
+                        <div class="person">
+                            <strong>Martina Doneda</strong>
+                            <span>University of Bergamo</span>
+                        </div>
+
+                        <div class="person">
+                            <strong>Alessandro Druetto</strong>
+                            <span>University of Torino</span>
+                        </div>
+
+                        <div class="person">
+                            <strong>Andrea Mancuso</strong>
+                            <span>University of Naples Federico II</span>
+                        </div>
+
+                        <div class="person">
+                            <strong>Sara Stoia</strong>
+                            <span>University of Calabria</span>
+                        </div>
+
+                        <div class="person">
+                            <strong>Marta Leonina Tessitore</strong>
+                            <span>University Roma Tre</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================
+     PARTNERS
+     ===================================== -->
+
+    <section class="partners" id="partners">
+
+        <div class="container">
+
+            <div class="partners-heading">
+                <p class="section-label">WITH THE SUPPORT OF</p>
+            </div>
+
+
+            <!-- Patronage -->
+
+            <div class="partner-group">
+
+                <!--<p class="partner-label">WITH THE PATRONAGE OF (CON IL PATROCINIO DI)</p>-->
+
+                <div class="partner-logos patronage-logos">
+
+                    <div class="partner-logo">
+                        <img src="/images/Logo-Salerno.png"
+                            alt="Comune di Salerno">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Institutional partners -->
+
+            <div class="partner-group">
+
+                <!--<p class="partner-label">SUPPORTED BY</p>-->
+
+                <div class="partner-logos">
+
+                    <div class="partner-logo">
+                        <img src="/images/cropped-logoairo.png"
+                            alt="AIRO">
+                    </div>
+
+                    <div class="partner-logo">
+                        <img src="/images/ay_logo_no_bckgnd.png"
+                            alt="AIROYoung">
+                    </div>
+
+                    <div class="partner-logo">
+                        <img src="/images/logo-dipmat.png"
+                            alt="Department of Mathematics, University of Salerno">
+                    </div>
+
+                    <div class="partner-logo">
+                        <img src="/images/logo-di.png"
+                            alt="Department of Computer Science, University of Salerno">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    </main>
+
+    <!-- =====================================
+     FOOTER
+     ===================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-main">
+
+                <div class="footer-info">
+
+                    <h2>AIROYoung Workshop 2027</h2>
+
+                    <p>
+                        Salerno, Italy · 22–24 February 2027
+                    </p>
+
+                    <p class="footer-organized">
+                        Organized by <strong>AIROYoung</strong>
+                    </p>
+
+                </div>
+
+
+                <div class="footer-contact">
+
+                    <p class="footer-label">
+                        CONTACT
+                    </p>
+
+                    <p>
+                        For any questions, please contact us at:
+                    </p>
+
+                    <a href="mailto:airoyoungworkshop2027@gmail.com">
+                        airoyoungworkshop2027@gmail.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2027 AIROYoung Workshop
+                </p>
+
+                <details class="photo-credits">
+
+                    <summary>Photo credits</summary>
+
+                    <div class="photo-credits-content">
+
+                        <p>
+                            Panoramic photo of Salerno by
+                            <a href="https://www.flickr.com/photos/8314403@N03/">Sabrina</a>,
+                            licensed under
+                            <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>.
+                            Cropped from the original.
+                        </p>
+
+                        <p>
+                            Photo of Arechi Castle and Salerno seafront courtesy of
+                            <a href="https://www.instagram.com/salerno_online/">Salerno Online</a>.
+                        </p>
+
+                        <p>
+                            Photo of Corso Vittorio Emanuele courtesy of
+                            <a href="https://www.instagram.com/salerno_online/">Salerno Online</a>.
+                        </p>
+
+                    </div>
+                </details>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+        const workshopDate = new Date("2027-02-22T09:30:00+01:00");
+
+        function updateCountdown() {
+
+            const now = new Date();
+            const difference = workshopDate - now;
+
+            if (difference <= 0) {
+                document.getElementById("countdown").innerHTML =
+                    "<strong>The workshop has started!</strong>";
+                return;
+            }
+
+            const days = Math.floor(
+                difference / (1000 * 60 * 60 * 24)
+            );
+
+            const hours = Math.floor(
+                (difference / (1000 * 60 * 60)) % 24
+            );
+
+            const minutes = Math.floor(
+                (difference / (1000 * 60)) % 60
+            );
+
+            const seconds = Math.floor(
+                (difference / 1000) % 60
+            );
+
+            document.getElementById("days").textContent =
+                days;
+
+            document.getElementById("hours").textContent =
+                String(hours).padStart(2, "0");
+
+            document.getElementById("minutes").textContent =
+                String(minutes).padStart(2, "0");
+
+            document.getElementById("seconds").textContent =
+                String(seconds).padStart(2, "0");
+        }
+
+        updateCountdown();
+
+        setInterval(updateCountdown, 1000);
+    </script>
+
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
+
+    <script>
+        const map = L.map("venue-map").setView(
+            [40.6775, 14.7655],
+            16
+        );
+
+        L.tileLayer(
+            "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+            {
+                maxZoom: 19,
+                attribution:
+                    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }
+        ).addTo(map);
+
+        L.marker([40.6775, 14.7655])
+            .addTo(map)
+            .bindPopup(
+                "<strong>Salone dei Marmi</strong><br>Palazzo di Città, Salerno"
+            )
+            .openPopup();
+    </script>
+
+</body>
+
+</html>
