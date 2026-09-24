@@ -15,6 +15,9 @@
     --dark-blue: #123b5d;
     --orange: #e87722;
 
+    --soft-orange: rgb(255, 205, 111);
+    --button-blue: #8ecae6;
+
     --white: #ffffff;
     --text: #183042;
 }
@@ -1254,6 +1257,167 @@ h1 span {
     max-height: 110px;
 }
 
+/* ----------------------------------------------------------
+   REGISTRATION
+   ---------------------------------------------------------- */
+
+.registration {
+    padding: 90px 0;
+
+    background: var(--white);
+}
+
+.registration > .container {
+    max-width: 1050px;
+}
+
+.registration h2 {
+    margin: 0 0 50px;
+
+    color: var(--dark-blue);
+
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    letter-spacing: -0.03em;
+
+    text-align: center;
+}
+
+.registration .section-label {
+    text-align: center;
+}
+
+
+/* Cards */
+
+.registration-stack {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    align-items: stretch;
+}
+
+.registration-card {
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: #f7fafb;
+
+    border-radius: 4px;
+
+    box-shadow: 0 10px 28px rgba(18, 59, 93, 0.08);
+}
+
+
+/* Header */
+
+.registration-card-header {
+    padding: 22px 32px;
+
+    background: var(--dark-blue);
+
+    text-align: center;
+}
+
+.registration-card-header h3 {
+    margin: 0;
+
+    color: var(--white);
+
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.registration-deadline {
+    margin: 7px 0 0;
+
+    color: rgb(255, 205, 111);
+
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+/* Body */
+
+.registration-card-body {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
+    padding: 35px 38px 38px;
+}
+
+.registration-card-body p {
+    margin: 0 0 22px;
+
+    color: var(--text);
+
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.registration-card-body a {
+    color: var(--blue);
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.registration-card-body a:hover {
+    color: var(--orange);
+}
+
+
+/* File names */
+
+.submission-files {
+    margin: -5px 0 25px;
+
+    padding-left: 24px;
+}
+
+.submission-files li {
+    margin-bottom: 8px;
+
+    color: var(--text);
+
+    font-size: 0.95rem;
+}
+
+.submission-files code {
+    font-size: 0.9rem;
+
+    color: var(--dark-blue);
+}
+
+
+/* Buttons */
+
+.registration-button {
+    margin-top: auto;
+
+    align-self: center;
+}
+
+.disabled-button {
+    background: var(--button-blue);
+
+    color: var(--white);
+
+    pointer-events: none;
+    cursor: default;
+
+    opacity: 0.9;
+}
+
 /* ==========================================================
    TABLET / MOBILE
    ========================================================== */
@@ -1586,6 +1750,15 @@ h1 span {
         bottom: 9%;
     }
 
+    /* Registration */
+
+    .registration-stack {
+        grid-template-columns: 1fr;
+    }
+
+    .registration-card-body {
+        padding: 30px 26px;
+    }
 }
 
 
