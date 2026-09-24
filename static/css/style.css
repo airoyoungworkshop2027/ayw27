@@ -1706,4 +1706,10 @@ h1 span {
     }
 
 
+    .timeline::before {
+        top: 0;
+        bottom: 0;
+    }
+
+
 }
