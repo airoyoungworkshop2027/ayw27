@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?v={{ now.Unix }}">
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="icon"
+      type="image/png"
+      href="{{ "images/favicon.png" | relURL }}">
 </head>
 
 
@@ -38,9 +45,11 @@
 
                 <a href="#theme">Theme</a>
 
+                <a href="#speakers">Speakers</a>
+
                 <a href="#registration">Registration</a>
 
-                <a href="#speakers">Speakers</a>
+                <a href="#grants">Grants</a>
                 
                 <!-- <a href="#program">Program</a>-->
                 
@@ -242,6 +251,342 @@
         </section>
 
         <!-- =====================================
+        SPEAKERS
+        ===================================== -->
+
+        <section class="speakers" id="speakers">
+
+            <div class="container">
+
+                <div class="speakers-heading">
+
+                    <p class="section-label">
+                        PLENARY TALKS
+                    </p>
+
+                    <h2>Invited speakers</h2>
+
+                </div>
+
+                <div class="speakers-grid">
+
+                    <!-- Claudia Archetti -->
+                    <div class="speaker-card speaker-archetti">
+
+                        <div class="speaker-photo"
+                            onclick="openSpeaker('claudia-dialog')"
+                            role="button"
+                            tabindex="0"
+                            aria-label="View profile of Claudia Archetti"
+                            onkeydown="if(event.key === 'Enter' || event.key === ' ') openSpeaker('claudia-dialog')">
+
+                            <img src="{{ "images/CA.jpg" | relURL }}"
+                                alt="Claudia Archetti">
+
+                        </div>
+                        <div class="speaker-content">
+
+                            <h3>Claudia Archetti</h3>
+
+                            <p class="speaker-affiliation">
+                                University of Brescia, Italy
+                            </p>
+
+                            <button class="speaker-more"
+                                    onclick="openSpeaker('claudia-dialog')">
+                                Read more →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Francisco Saldanha da Gama -->
+                    <div class="speaker-card speaker-saldanha">
+
+                        <div class="speaker-photo"
+                            onclick="openSpeaker('francisco-dialog')"
+                            role="button"
+                            tabindex="0"
+                            aria-label="View profile of Francisco Saldanha da Gama"
+                            onkeydown="if(event.key === 'Enter' || event.key === ' ') openSpeaker('francisco-dialog')">
+
+                            <img src="{{ "images/FSdG.jpg" | relURL }}"
+                                alt="Francisco Saldanha da Gama">
+
+                        </div>
+                        <div class="speaker-content">
+
+                            <h3>Francisco Saldanha da Gama</h3>
+
+                            <p class="speaker-affiliation">
+                                Sheffield University Management School, UK
+                            </p>
+
+                            <button class="speaker-more"
+                                    onclick="openSpeaker('francisco-dialog')">
+                                Read more →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Juan-José Salazar-González -->
+                    <div class="speaker-card speaker-salazar">
+
+                        <div class="speaker-photo"
+                            onclick="openSpeaker('juan-dialog')"
+                            role="button"
+                            tabindex="0"
+                            aria-label="View profile of Juan-José Salazar-González"
+                            onkeydown="if(event.key === 'Enter' || event.key === ' ') openSpeaker('juan-dialog')">
+
+                            <img src="{{ "images/JJSG.jpg" | relURL }}"
+                                alt="Juan-José Salazar-González">
+
+                        </div>
+                        <div class="speaker-content">
+
+                            <h3>Juan-José Salazar-González</h3>
+
+                            <p class="speaker-affiliation">
+                                Universidad de La Laguna, Spain
+                            </p>
+
+                            <button class="speaker-more"
+                                    onclick="openSpeaker('juan-dialog')">
+                                Read more →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================================
+            SPEAKER DIALOGS
+            ========================================================== -->
+
+
+        <!-- Claudia Archetti -->
+
+        <dialog class="speaker-dialog" id="claudia-dialog">
+
+            <div class="speaker-dialog-inner">
+
+                <button class="speaker-dialog-close"
+                        onclick="closeSpeaker('claudia-dialog')"
+                        aria-label="Close">
+                    ×
+                </button>
+
+                <div class="speaker-dialog-top">
+
+                    <div class="speaker-dialog-photo">
+                        <img src="{{ "images/CA.jpg" | relURL }}"
+                            alt="Claudia Archetti">
+                    </div>
+
+                    <h3>Claudia Archetti</h3>
+
+                    <p class="speaker-dialog-affiliation">
+                        University of Brescia, Italy
+                    </p>
+
+                    <div class="speaker-links">
+
+                        <a href="https://www.unibs.it/it/ugov/person/3039"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Institutional site"
+                        title="Institutional site">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </a>
+
+                        <a href="https://scholar.google.com/citations?user=r72dRuEAAAAJ&hl=en"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Google Scholar"
+                        title="Google Scholar">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </a>
+
+                        <a href="https://orcid.org/0000-0002-3524-1600"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="ORCID"
+                        title="ORCID">
+                            <i class="fa-brands fa-orcid"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="speaker-dialog-bio">
+
+                    <h4>Short bio</h4>
+
+                    <p>
+                        Claudia Archetti is Full Professor of Operations Research at University of Brescia. From September 2021 to September 2024, she was Full Professor in Operations Research at ESSEC Business School in Paris. The main areas of the scientific activity are: models and algorithms for vehicle routing problems; mixed integer mathematical programming models for the minimization of the sum of inventory and transportation costs in logistic networks; exact and heuristic algorithms for supply-chain management; reoptimization of combinatorial optimization problems. She is author of more than 130 papers in international journals. She is co-Editor in Chief of Networks. She was VIP3 of EURO, the Association of European Operational Research Societies, in charge of publications and communication.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </dialog>
+
+
+        <!-- Francisco Saldanha da Gama -->
+
+        <dialog class="speaker-dialog" id="francisco-dialog">
+
+            <div class="speaker-dialog-inner">
+
+                <button class="speaker-dialog-close"
+                        onclick="closeSpeaker('francisco-dialog')"
+                        aria-label="Close">
+                    ×
+                </button>
+
+                <div class="speaker-dialog-top">
+
+                    <div class="speaker-dialog-photo">
+                        <img src="{{ "images/FSdG.jpg" | relURL }}"
+                            alt="Francisco Saldanha da Gama">
+                    </div>
+
+                    <h3>Francisco Saldanha da Gama</h3>
+
+                    <p class="speaker-dialog-affiliation">
+                        Sheffield University Management School, UK
+                    </p>
+
+                    <div class="speaker-links">
+
+                        <a href="https://sheffield.ac.uk/management/people/academic-staff/omds/francisco-saldanha-da-gama"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Institutional site"
+                        title="Institutional site">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </a>
+
+                        <a href="https://scholar.google.com/citations?user=NPDmx4MAAAAJ&hl=en"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Google Scholar"
+                        title="Google Scholar">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </a>
+
+                        <a href="https://orcid.org/0000-0002-2074-1856"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="ORCID"
+                        title="ORCID">
+                            <i class="fa-brands fa-orcid"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="speaker-dialog-bio">
+
+                    <h4>Short bio</h4>
+
+                    <p>
+                        Francisco Saldanha da Gama is chair of supply chain management at Sheffield University Management School (UK), where he is also the head of SOLARC—Supply Chain, Operations and Logistics Applied Research Centre. His research interests include operations research, operations management, business analytics, and decision-making under uncertainty, with applications to logistics, supply chain management, facility location, and project scheduling. Over the past three decades, he has accumulated vast teaching experience spanning multiple topics in operations management, operations research, applied probability, and statistics. He has been awarded a dozen prizes and honors. He is a member of several international scientific organizations, such as the EURO Working Group on Locational Analysis, of which he is one of the past coordinators. He is the Editor-in-Chief of Computers & Operations Research and a member of the Editorial Advisory Board of several journals, such as the INFORMS Journal on Computing, Transportation Research Part E, Omega, and the Journal of the Operational Research Society (UK).
+                    </p>
+
+                </div>
+
+            </div>
+
+        </dialog>
+
+
+        <!-- Juan-José Salazar-González -->
+
+        <dialog class="speaker-dialog" id="juan-dialog">
+
+            <div class="speaker-dialog-inner">
+
+                <button class="speaker-dialog-close"
+                        onclick="closeSpeaker('juan-dialog')"
+                        aria-label="Close">
+                    ×
+                </button>
+
+                <div class="speaker-dialog-top">
+
+                    <div class="speaker-dialog-photo">
+                        <img src="{{ "images/JJSG.jpg" | relURL }}"
+                            alt="Juan-José Salazar-González">
+                    </div>
+
+                    <h3>Juan-José Salazar-González</h3>
+
+                    <p class="speaker-dialog-affiliation">
+                        Universidad de La Laguna, Spain
+                    </p>
+
+                    <div class="speaker-links">
+
+                        <a href="https://portalciencia.ull.es/investigadores/81268/detalle"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Institutional site"
+                        title="Institutional site">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </a>
+
+                        <a href="http://scholar.google.es/citations?user=pd7y0AcAAAAJ&hl=en"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Google Scholar"
+                        title="Google Scholar">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </a>
+
+                        <a href="https://orcid.org/0000-0001-5683-0271"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="ORCID"
+                        title="ORCID">
+                            <i class="fa-brands fa-orcid"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="speaker-dialog-bio">
+
+                    <h4>Short bio</h4>
+
+                    <p>
+                        Juan-José Salazar-González got his PhD from the University of Bologna (Italy) in 1992. He is Full Professor in Statistics and Operations Research at Universidad de La Laguna (Spain) since 2006, where he is also Director of the Department of Mathematics, Statistics and Operations Research since 2020. He has been a visiting professor at several universities and research institutions around the world and was a promoter and co-founder of the Mathematical Research Institute of Universidad de La Laguna (IMAULL), serving as its first director from 2022 to 2025. His research expertise includes Combinatorial Optimisation, with particular emphasis on optimisation problems arising in Vehicle Routing and Logistics, but also on graph theory, polyhedral combinatorics, telecommunication problems, and statistical confidentiality, among others. He has been principal investigator of several national and international research projects and has extensive experience in the organisation of international scientific events. He is Vice-President of EURO in charge of the publications from 2021 to 2025, he was co-Editor-in-Chief of the SEIO journal "TOP" from 2015 to 2019 and serves as Associate Editor for several scientific journals.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </dialog>
+
+        <!-- =====================================
             IMPORTANT DATES
         ===================================== -->
 
@@ -338,156 +683,188 @@
 
         </section>
 
-    <!-- =====================================
-     REGISTRATION
-     ===================================== -->
+        <!-- =====================================
+        REGISTRATION
+        ===================================== -->
 
-    <section class="registration" id="registration">
+        <section class="registration" id="registration">
+
+            <div class="container">
+
+                <p class="section-label">
+                    PARTICIPATION
+                </p>
+
+                <h2>Registration & Abstract Submission</h2>
+
+                <div class="registration-stack">
+
+
+                    <!-- Registration -->
+
+                    <div class="registration-card">
+
+                        <div class="registration-card-header">
+                            <h3>Registration</h3>
+
+                            <p class="registration-deadline">
+                                Deadline: February 8, 2027
+                            </p>
+                        </div>
+
+                        <div class="registration-card-body">
+
+                            <p>
+                                Participation in the workshop is
+                                <strong>free of charge</strong>.
+                            </p>
+
+                            <p>
+                                Registration will open on <strong>November 9</strong>.
+                                You may register for the workshop first and
+                                submit your abstract at a later stage.
+                                Early registration is particularly recommended
+                                for those interested in applying for an
+                                accommodation grant. 
+                            </p>
+                            <p>
+                                We currently offer <strong>10 accommodation grants</strong>: further details are available in the
+                                <a href="#grants"><strong>Grants</strong></a> section.
+                            </p>
+
+                            <span class="button registration-button disabled-button">
+                                Register
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Abstract Submission -->
+
+                    <div class="registration-card">
+
+                        <div class="registration-card-header">
+                            <h3>Abstract Submission</h3>
+
+                            <p class="registration-deadline">
+                                Deadline: December 30, 2026
+                            </p>
+                        </div>
+
+                        <div class="registration-card-body">
+
+                            <p>
+                                Abstract submission will be available starting <b>November 9</b>.
+                            </p>
+
+                            <p>
+                                The LaTeX template and detailed submission instructions will be published here.
+                            </p>
+
+                            <p>
+                                Please note that each participant may give at most <b>one presentation</b> during the workshop.
+                            </p>
+
+                            <!--
+                            <p>
+                                Abstracts must not exceed one page, including references.
+                                Please use the LaTeX template available
+                                <a href="#">here</a>
+                                and upload a ZIP archive containing all source files
+                                together with a PDF version of the abstract.
+                            </p>
+
+                            <p>
+                                Files should be named as follows:
+                            </p>
+
+                            <ul class="submission-files">
+                                <li>
+                                    PDF:
+                                    <code>SURNAME_NAME_11AYW.pdf</code>
+                                </li>
+
+                                <li>
+                                    ZIP:
+                                    <code>SURNAME_NAME_11AYW.zip</code>
+                                </li>
+                            </ul>
+
+                            <p>
+                                Please note that each participant may give
+                                at most one presentation during the workshop.
+                            </p>
+                            -->
+
+                            <span class="button registration-button disabled-button">
+                                Submit abstract
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="grants" id="grants">
 
         <div class="container">
 
-            <p class="section-label">
-                PARTICIPATION
-            </p>
+            <div class="grants-heading">
+                <p class="section-label">
+                    ACCOMMODATION SUPPORT
+                </p>
 
-            <h2>Registration & Abstract Submission</h2>
+                <h2>Grants</h2>
+            </div>
 
-            <div class="registration-stack">
+            <div class="grants-content">
 
+                <p>
+                    We currently offer <strong>10 accommodation grants</strong>
+                    for participants who:
+                </p>
 
-                <!-- Registration -->
+                <ul class="grant-conditions">
+                    <li>submit an abstract;</li>
+                    <li>are selected to give a presentation at the workshop;</li>
+                    <li>express their interest in receiving this support during registration.</li>
+                </ul>
 
-                <div class="registration-card">
+                <p>
+                    Successful applicants will be notified by
+                    <strong>11 January 2027</strong>, together with detailed
+                    instructions on how to confirm the grant.
+                </p>
 
-                    <div class="registration-card-header">
-                        <h3>Registration</h3>
+                <p>
+                    After receiving the grant notification, selected
+                    participants will be asked to provide proof of
+                    <strong>AIRO membership</strong>
+                    (or complete their membership registration) and proof of
+                    <strong>travel arrangements</strong>, as confirmation of their
+                    participation in the workshop.
+                </p>
 
-                        <p class="registration-deadline">
-                            Deadline: February 8, 2027
-                        </p>
-                    </div>
-
-                    <div class="registration-card-body">
-
-                        <p>
-                            Participation in the workshop is
-                            <strong>free of charge</strong>.
-                        </p>
-
-                        <p>
-                            You may register for the workshop first and
-                            submit your abstract at a later stage.
-                            Early registration is particularly recommended
-                            for those interested in applying for an
-                            accommodation grant. 
-                        </p>
-                        <p>
-                            Registration will open on <b>November 9</b>, 
-                            and details on the <a href="#grants">Grants</a> will
-                            be available soon.
-                        </p>
-
-                        <span class="button registration-button disabled-button">
-                            Register
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Abstract Submission -->
-
-                <div class="registration-card">
-
-                    <div class="registration-card-header">
-                        <h3>Abstract Submission</h3>
-
-                        <p class="registration-deadline">
-                            Deadline: December 30, 2026
-                        </p>
-                    </div>
-
-                    <div class="registration-card-body">
-
-                        <p>
-                            Abstract submission will be available starting <b>November 9</b>.
-                        </p>
-
-                        <p>
-                            The LaTeX template and detailed submission instructions will be published here.
-                        </p>
-
-                        <p>
-                            Please note that each participant may give at most <b>one presentation</b> during the workshop.
-                        </p>
-
-                        <!--
-                        <p>
-                            Abstracts must not exceed one page, including references.
-                            Please use the LaTeX template available
-                            <a href="#">here</a>
-                            and upload a ZIP archive containing all source files
-                            together with a PDF version of the abstract.
-                        </p>
-
-                        <p>
-                            Files should be named as follows:
-                        </p>
-
-                        <ul class="submission-files">
-                            <li>
-                                PDF:
-                                <code>SURNAME_NAME_11AYW.pdf</code>
-                            </li>
-
-                            <li>
-                                ZIP:
-                                <code>SURNAME_NAME_11AYW.zip</code>
-                            </li>
-                        </ul>
-
-                        <p>
-                            Please note that each participant may give
-                            at most one presentation during the workshop.
-                        </p>
-                        -->
-
-                        <span class="button registration-button disabled-button">
-                            Submit abstract
-                        </span>
-
-                    </div>
-
-                </div>
+                <p class="grants-contact">
+                    For any questions regarding registration, abstract submission,
+                    or accommodation grants, please contact us at
+                    <a href="mailto:airoyoungworkshop2027@gmail.com">
+                        airoyoungworkshop2027@gmail.com
+                    </a>.
+                </p>
 
             </div>
 
         </div>
 
     </section>
-
-        <!-- =====================================
-        SPEAKERS
-        ===================================== -->
-
-        <section class="speakers" id="speakers">
-
-            <div class="container simple-section">
-
-                <p class="section-label">
-                    INVITED SPEAKERS
-                </p>
-
-                <h2>Speakers</h2>
-
-                <p class="coming-soon">
-                    Invited speakers will be announced soon... stay tuned! ⏳
-                </p>
-
-            </div>
-
-        </section>
 
         <!-- =====================================
             PROGRAM
@@ -625,11 +1002,13 @@
 
         <div class="container">
 
-            <p class="section-label">
-                ORGANIZATION
-            </p>
+            <div class="committee-heading">
+                <p class="section-label">
+                    ORGANIZATION
+                </p>
 
-            <h2>Committee</h2>
+                <h2>Committee & Board</h2>
+            </div>
 
 
             <div class="organization-grid">
@@ -1020,6 +1399,39 @@
             }
         });
     </script>
+
+    <script>
+        function openSpeaker(id) {
+            document.getElementById(id).showModal();
+        }
+
+        function closeSpeaker(id) {
+            document.getElementById(id).close();
+        }
+
+
+        /* Close dialog by clicking outside it */
+
+        document.querySelectorAll(".speaker-dialog").forEach(dialog => {
+
+            dialog.addEventListener("click", function(event) {
+
+                const rect = dialog.getBoundingClientRect();
+
+                const clickedInside =
+                    event.clientX >= rect.left &&
+                    event.clientX <= rect.right &&
+                    event.clientY >= rect.top &&
+                    event.clientY <= rect.bottom;
+
+                if (!clickedInside) {
+                    dialog.close();
+                }
+
+            });
+
+        });
+        </script>
 
 </body>
 

@@ -49,15 +49,34 @@ body {
     margin: 0 auto;
 }
 
+section {
+    scroll-margin-top: 100px;
+}
+
+.theme p,
+.registration-card-body p,
+.grants-content p,
+.speaker-dialog-bio p,
+.venue-info p,
+.travel-item p,
+.simple-section p {
+    text-align: justify;
+}
+
 
 /* ----------------------------------------------------------
    HEADER / NAVIGATION
    ---------------------------------------------------------- */
 
 .site-header {
-    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
+    background: var(--white);
     border-bottom: 1px solid #e7eef2;
+
+    box-shadow: 0 2px 10px rgba(18, 59, 93, 0.06);
 }
 
 .nav-container {
@@ -480,8 +499,6 @@ h1 span {
 
 .important-dates {
     padding: 90px 0 110px;
-
-    background: var(--light-blue);
 }
 
 .important-dates h2 {
@@ -822,15 +839,19 @@ h1 span {
 
 /* Alternate backgrounds */
 
-.registration {
-    background: var(--white);
-}
-
 .speakers {
     background: #f7fafb;
 }
 
-.program {
+.important-dates {
+    background: var(--white);
+}
+
+.registration {
+    background: #f7fafb;
+}
+
+.grants {
     background: var(--white);
 }
 
@@ -840,6 +861,10 @@ h1 span {
 
 .committee {
     background: var(--white);
+}
+
+.partners {
+    background: #f7fafb;
 }
 
 
@@ -876,8 +901,6 @@ h1 span {
 
 .venue {
     padding: 100px 0;
-
-    background: var(--white);
 }
 
 .venue h2 {
@@ -994,10 +1017,12 @@ h1 span {
    COMMITTEE
    ---------------------------------------------------------- */
 
+.committee-heading {
+    text-align: center;
+}
+
 .committee {
     padding: 90px 0;
-
-    background: #f7fafb;
 }
 
 .committee h2 {
@@ -1168,8 +1193,6 @@ h1 span {
 
 .partners {
     padding: 90px 0 100px;
-
-    background: var(--white);
 }
 
 .partners-heading {
@@ -1263,8 +1286,6 @@ h1 span {
 
 .registration {
     padding: 90px 0;
-
-    background: var(--white);
 }
 
 .registration > .container {
@@ -1439,6 +1460,411 @@ h1 span {
 
 .marker-station {
     background: #ec3939;
+}
+
+
+/* ----------------------------------------------------------
+   SPEAKERS
+   ---------------------------------------------------------- */
+
+/* ----------------------------------------------------------
+   SPEAKERS
+   ---------------------------------------------------------- */
+
+.speakers-heading {
+    text-align: center;
+}
+
+.speakers {
+    padding: 90px 0;
+}
+
+.speakers h2 {
+    margin: 0 0 50px;
+
+    color: var(--dark-blue);
+
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    letter-spacing: -0.03em;
+}
+
+
+/* Cards */
+
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+
+    align-items: stretch;
+}
+
+.speaker-card {
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: var(--white);
+
+    border-radius: 4px;
+
+    box-shadow: 0 10px 28px rgba(18, 59, 93, 0.08);
+}
+
+
+/* Main photos */
+
+.speaker-photo {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.speaker-photo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.25s ease;
+}
+
+.speaker-photo:hover img {
+    transform: scale(1.03);
+}
+
+
+/* Crop correction */
+
+.speaker-archetti img {
+    object-position: center 20%;
+}
+
+.speaker-saldanha img {
+    object-position: center 18%;
+}
+
+.speaker-salazar img {
+    object-position: center 20%;
+}
+
+
+/* Card text */
+
+.speaker-content {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
+    padding: 28px 28px 30px;
+}
+
+.speaker-content h3 {
+    margin: 0 0 8px;
+
+    color: var(--dark-blue);
+
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.speaker-affiliation {
+    margin: 0;
+
+    color: var(--orange);
+
+    font-size: 0.88rem;
+    font-weight: 600;
+
+    line-height: 1.45;
+}
+
+
+/* Read bio */
+
+.speaker-more {
+    align-self: flex-start;
+
+    margin-top: auto;
+    padding-top: 24px;
+
+    border: 0;
+    background: none;
+
+    color: var(--blue);
+
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.speaker-more:hover {
+    color: var(--orange);
+}
+
+
+/* ----------------------------------------------------------
+   SPEAKER POPUP
+   ---------------------------------------------------------- */
+
+.speaker-dialog {
+    width: min(700px, 90vw);
+    max-height: 88vh;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 6px;
+
+    background: var(--white);
+
+    box-shadow: 0 20px 60px rgba(7, 29, 43, 0.3);
+
+    overflow: auto;
+}
+
+.speaker-dialog::backdrop {
+    background: rgba(7, 29, 43, 0.68);
+}
+
+
+/* Dialog content */
+
+.speaker-dialog-inner {
+    position: relative;
+    padding: 0;
+}
+
+/* Close button */
+
+.speaker-dialog-close {
+    position: absolute;
+
+    top: 16px;
+    right: 20px;
+
+    padding: 0;
+
+    border: 0;
+    background: none;
+
+    color: var(--dark-blue);
+
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.speaker-dialog-close:hover {
+    color: var(--orange);
+}
+
+
+/* Top part */
+
+.speaker-dialog-top {
+    padding: 38px 50px 30px;
+
+    background: var(--light-blue);
+
+    text-align: center;
+}
+
+/* Small circular photo */
+
+.speaker-dialog-photo {
+    width: 120px;
+    height: 120px;
+
+    margin: 0 auto 20px;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    box-shadow: 0 5px 18px rgba(18, 59, 93, 0.15);
+}
+
+.speaker-dialog-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+
+/* Name */
+
+.speaker-dialog-top h3 {
+    margin: 0 0 8px;
+
+    color: var(--dark-blue);
+
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+
+/* Affiliation */
+
+.speaker-dialog-affiliation {
+    margin: 0 0 22px;
+
+    color: var(--orange);
+
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+
+/* Academic links */
+
+.speaker-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 10px 20px;
+}
+
+.speaker-links a {
+    color: var(--blue);
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.speaker-links a:hover {
+    color: var(--orange);
+}
+
+
+/* Bio */
+
+.speaker-dialog-bio {
+    margin-top: 0;
+    padding: 30px 50px 45px;
+    border-top: 1px solid #e7eef2;
+}
+
+.speaker-dialog-bio h4 {
+    margin: 0 0 14px;
+
+    color: var(--dark-blue);
+
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.speaker-dialog-bio p {
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 0.98rem;
+    line-height: 1.75;
+}
+
+/* ----------------------------------------------------------
+   GRANTS
+   ---------------------------------------------------------- */
+
+.grants-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.grants-content {
+    margin: 0 auto;
+}
+
+.grants {
+    padding: 90px 0;
+}
+
+.grants h2 {
+    margin: 0 0 40px;
+
+    color: var(--dark-blue);
+
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    letter-spacing: -0.03em;
+}
+
+.grants-content p {
+    margin: 0 0 22px;
+
+    color: var(--text);
+
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+
+/* Conditions */
+
+.grant-conditions {
+    margin: 5px 0 28px;
+
+    padding-left: 24px;
+}
+
+.grant-conditions li {
+    margin-bottom: 10px;
+
+    color: var(--text);
+
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.grant-conditions li::marker {
+    color: var(--orange);
+}
+
+
+/* Contact */
+
+.grants-contact {
+    margin-top: 30px !important;
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(18, 59, 93, 0.15);
+}
+
+.grants-contact a {
+    color: var(--blue);
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.grants-contact a:hover {
+    color: var(--orange);
 }
 
 /* ==========================================================
@@ -1797,12 +2223,66 @@ h1 span {
 
         text-align: left;
     }
+
+    /* Speakers */
+
+    /* Speakers */
+
+    .speakers {
+        padding: 70px 0;
+    }
+
+    .speakers h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .speakers-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .speaker-card {
+        width: 100%;
+        max-width: 420px;
+
+        margin: 0 auto;
+    }
+
+    /* Grants */
+
+    .grants {
+        padding: 70px 0;
+    }
+
+    .grants h2 {
+        font-size: 2rem;
+        margin-bottom: 35px;
+    }
+
+    .grants-content p,
+    .grant-conditions li {
+        font-size: 1rem;
+    }
 }
 
 
 /* ==========================================================
    SMALL PHONES
    ========================================================== */
+
+@media (max-width: 600px) {
+
+    .grants {
+        padding: 60px 0;
+    }
+
+    .grant-conditions {
+        padding-left: 20px;
+    }
+
+}
 
 @media (max-width: 480px) {
 
