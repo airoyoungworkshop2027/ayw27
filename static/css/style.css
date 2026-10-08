@@ -1418,6 +1418,29 @@ h1 span {
     opacity: 0.9;
 }
 
+.custom-marker {
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    border: 3px solid white;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.marker-workshop {
+    background: var(--orange);
+}
+
+.marker-university {
+    background: var(--blue);
+}
+
+.marker-station {
+    background: #ec3939;
+}
+
 /* ==========================================================
    TABLET / MOBILE
    ========================================================== */
@@ -1759,6 +1782,21 @@ h1 span {
     .registration-card-body {
         padding: 30px 26px;
     }
+
+    .photo-credits {
+    width: 100%;
+    text-align: left;
+}
+
+    .photo-credits-content {
+        left: 0;
+        right: auto;
+
+        width: 100%;
+        max-width: 400px;
+
+        text-align: left;
+    }
 }
 
 
@@ -1886,10 +1924,20 @@ h1 span {
         font-size: 1.8rem;
     }
 
-    .photo-credits-content {
-        width: min(400px, 85vw);
+    .photo-credits {
+        width: 100%;
+        text-align: left;
     }
 
+    .photo-credits-content {
+        left: 0;
+        right: auto;
+
+        width: 100%;
+        max-width: 400px;
+
+        text-align: left;
+    }
 
     .timeline {
         width: 90%;

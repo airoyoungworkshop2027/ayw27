@@ -955,12 +955,70 @@
             }
         ).addTo(map);
 
-        L.marker([40.6775, 14.7655])
-            .addTo(map)
-            .bindPopup(
-                "<strong>Salone dei Marmi</strong><br>Palazzo di Città, Salerno"
-            )
-            .openPopup();
+        const workshopIcon = L.divIcon({
+            className: "",
+            html: '<div class="custom-marker marker-workshop"></div>',
+            iconSize: [22, 22],
+            iconAnchor: [11, 11],
+            popupAnchor: [0, -12]
+        });
+
+        const universityIcon = L.divIcon({
+            className: "",
+            html: '<div class="custom-marker marker-university"></div>',
+            iconSize: [22, 22],
+            iconAnchor: [11, 11],
+            popupAnchor: [0, -12]
+        });
+
+        const stationIcon = L.divIcon({
+            className: "",
+            html: '<div class="custom-marker marker-station"></div>',
+            iconSize: [22, 22],
+            iconAnchor: [11, 11],
+            popupAnchor: [0, -12]
+        });
+
+
+        L.marker([40.6775, 14.7655], {
+            icon: workshopIcon
+        })
+        .addTo(map)
+        .bindPopup(
+            "<strong>Salone dei Marmi</strong><br>Palazzo di Città, Salerno"
+        );
+
+        L.marker([40.7714, 14.7898], {
+            icon: universityIcon
+        })
+        .addTo(map)
+        .bindPopup(
+            "<strong>University of Salerno</strong><br>Fisciano Campus"
+        );
+
+        L.marker([40.6749, 14.7727], {
+            icon: stationIcon
+        })
+        .addTo(map)
+        .bindPopup(
+            "<strong>Salerno Railway Station</strong>"
+        );
+
+    </script>
+
+    <script>
+        document.addEventListener("click", function (event) {
+            const photoCredits = document.querySelector(".photo-credits");
+
+            if (!photoCredits) return;
+
+            if (
+                photoCredits.hasAttribute("open") &&
+                !photoCredits.contains(event.target)
+            ) {
+                photoCredits.removeAttribute("open");
+            }
+        });
     </script>
 
 </body>
