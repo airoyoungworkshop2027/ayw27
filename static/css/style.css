@@ -1867,6 +1867,22 @@ h1 span {
     color: var(--orange);
 }
 
+.partner-logo {
+    text-decoration: none;
+}
+
+.sponsor-logos .partner-logo {
+    transition: transform 0.2s ease;
+}
+
+.sponsor-logos .partner-logo:hover {
+    transform: translateY(-3px);
+}
+
+.sponsor-logos .partner-logo img {
+    max-height: 80px;
+}
+
 /* ==========================================================
    TABLET / MOBILE
    ========================================================== */
