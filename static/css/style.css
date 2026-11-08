@@ -1392,7 +1392,11 @@ h1 span {
     text-decoration: none;
 }
 
-.registration-card-body a:hover {
+.registration-card-body .registration-button {
+    color: var(--white);
+}
+
+.registration-card-body a:not(.registration-button):hover {
     color: var(--orange);
 }
 
@@ -1424,7 +1428,7 @@ h1 span {
 
 .registration-button {
     margin-top: auto;
-
+    color: var(--white);
     align-self: center;
 }
 
